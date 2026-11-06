@@ -1,0 +1,22 @@
+# 项目依赖
+#
+# 实测环境：Windows / Python 3.13.7
+# 安装：pip install -r requirements.txt
+#
+# 注意：以下版本已在 Python 3.13 上实测可用。
+# 早期版本（numpy 1.26 / opencv 4.9 / Pillow 10.2）没有 cp313 wheel，
+# 在 Python 3.13 上会安装失败，请勿回退。
+
+## 核心依赖
+
+numpy==2.5.4
+opencv-python==5.0.0.93
+Pillow==13.0.0
+
+## 开发依赖
+
+pytest==9.2.0
+pytest-cov==7.1.0
+black==26.10.1
+flake8==7.5.0
+mypy==2.4.1

@@ -1,0 +1,19 @@
+# flake8 配置
+#
+# 注意：flake8 不读取 pyproject.toml，配置必须放在本文件（或 setup.cfg / tox.ini）里。
+# 因此 pyproject.toml 中的 [tool.flake8] 段已删除，以免产生“以为生效了”的假象。
+
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503
+exclude =
+    .git,
+    .venv,
+    __pycache__,
+    build,
+    dist,
+    samples
+
+# tests/ 需要先 sys.path.insert 再 import，属于有意为之
+per-file-ignores =
+    tests/*:E402
